@@ -88,7 +88,7 @@ const Index = () => {
       <header className="w-full py-10 bg-hero-gradient">
         <div className="container">
           <BrandLogo size={56} />
-          <h1 className="font-display text-4xl md:text-6xl font-bold bg-hero-gradient bg-clip-text text-transparent text-center">
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground text-center">
             Hệ thống tư vấn chọn ngành đại học
           </h1>
           <p className="mt-4 text-primary-foreground/90 text-center max-w-2xl mx-auto">
