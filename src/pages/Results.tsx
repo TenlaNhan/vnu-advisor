@@ -63,13 +63,13 @@ const Results = () => {
       </Helmet>
       <main className="container py-10">
         <header className="mb-6">
-          <h1 className="text-3xl font-bold">Ngành học đề xuất</h1>
+          <h1 className="font-display text-3xl md:text-5xl font-bold bg-hero-gradient bg-clip-text text-transparent">Ngành học đề xuất</h1>
           <p className="text-muted-foreground">Dựa trên thông tin bạn cung cấp</p>
         </header>
 
         <section className="grid md:grid-cols-2 gap-6">
           {results.map(({ m, score }) => (
-            <Card key={m.id} className="relative overflow-hidden group">
+            <Card key={m.id} className="relative overflow-hidden group bg-card/80 backdrop-blur-xl border border-border/60 shadow-elevated hover:shadow-glow transition-shadow hover-scale">
               <div className="absolute -inset-0.5 opacity-0 group-hover:opacity-100 transition-opacity bg-hero-gradient blur-2xl"></div>
               <CardHeader className="relative">
                 <CardTitle className="flex items-center justify-between">
@@ -94,7 +94,7 @@ const Results = () => {
                   <p className="text-sm font-medium">Tài nguyên học tập</p>
                   <ul className="list-disc list-inside text-sm text-muted-foreground">
                     {m.resources.map((r) => (
-                      <li key={r.url}><a href={r.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{r.title}</a></li>
+                      <li key={r.url}><a href={r.url} target="_blank" rel="noopener noreferrer" className="story-link">{r.title}</a></li>
                     ))}
                   </ul>
                 </div>

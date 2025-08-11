@@ -88,7 +88,7 @@ const Index = () => {
       <header className="w-full py-10 bg-hero-gradient">
         <div className="container">
           <BrandLogo size={56} />
-          <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground text-center">
+          <h1 className="font-display text-4xl md:text-6xl font-bold bg-hero-gradient bg-clip-text text-transparent text-center">
             Hệ thống tư vấn chọn ngành đại học
           </h1>
           <p className="mt-4 text-primary-foreground/90 text-center max-w-2xl mx-auto">
@@ -98,7 +98,7 @@ const Index = () => {
       </header>
       <main className="container py-10">
         <section className="grid md:grid-cols-2 gap-6 items-start">
-          <Card className="shadow-elevated">
+          <Card className="shadow-elevated hover:shadow-glow transition-shadow bg-card/80 backdrop-blur-xl border border-border/60 hover-scale">
             <CardHeader>
               <CardTitle>Nhập thông tin của bạn</CardTitle>
               <CardDescription>Chúng tôi sẽ gợi ý ngành học phù hợp nhất</CardDescription>
@@ -187,7 +187,7 @@ const Index = () => {
             </CardContent>
           </Card>
 
-          <Card className="md:sticky md:top-6">
+          <Card className="md:sticky md:top-6 bg-card/80 backdrop-blur-xl border border-border/60 shadow-elevated hover:shadow-glow transition-shadow hover-scale">
             <CardHeader>
               <CardTitle>Hệ thống DSS</CardTitle>
               <CardDescription>Nguyên tắc gợi ý đơn giản</CardDescription>
