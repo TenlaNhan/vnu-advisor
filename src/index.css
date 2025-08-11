@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 220 80% 45%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 48 96% 88%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 48 92% 50%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,9 +34,18 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 220 80% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Extended design tokens */
+    --brand: 220 80% 45%;
+    --brand-contrast: 210 40% 98%;
+    --edu-yellow: 48 92% 50%;
+    --primary-glow: 220 90% 60%;
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--edu-yellow)) 100%);
+    --shadow-elevated: 0 10px 30px -10px hsl(var(--brand) / 0.35);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.45);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +110,20 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(1200px 600px at 20% -10%, hsl(var(--edu-yellow) / 0.12), transparent 60%),
+      radial-gradient(1000px 500px at 80% 10%, hsl(var(--brand) / 0.12), transparent 60%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background-image: var(--gradient-hero);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
   }
 }
